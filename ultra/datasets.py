@@ -1093,3 +1093,10 @@ class JointDataset(InMemoryDataset):
         # ]
 
         torch.save((train_data, valid_data, test_data), self.processed_paths[0])
+
+
+# Import FB60K+NYT10 dataset
+from .fb60k_nyt10_dataset import FB60KNYT10, FB60KNYT10_dataset
+
+# Make FB60KNYT10 available at module level
+__all__ = ['FB60KNYT10', 'FB60KNYT10_dataset']
